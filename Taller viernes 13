@@ -1,0 +1,196 @@
+//Ejercicio 1
+//Transformar precios con impuestos: A una lista de 20 productos de
+//tecnología, con nombre y precio, aplica un impuesto del 15% utilizando map().
+let producto = [
+    {Nombre: "Nintendo", precio: 488422},
+    {Nombre: 'Amazon_Echo', precio: 629213},
+    {Nombre: 'Airpods', precio: 374376},
+    {Nombre: 'Calular_Xiomi', precio: 638949},
+    {Nombre: 'Parlante', precio: 360476},
+    {Nombre: 'Televisor_Samnsung', precio:	364752},
+    {Nombre: 'Equipo_de_sonido', precio:	440452},
+    {Nombre: 'Computador_Ace', precio:	631630},
+    {Nombre: 'Tablet_Lenovo', precio:	641893},
+    {Nombre: 'Oculos_Quest', precio:	628740},
+    {Nombre: 'Camara_Canon', precio:	604450},
+    {Nombre: 'Consola_Dj_pro', precio:	410048},
+    {Nombre: 'Iphone_15', precio:	440137},
+    {Nombre: 'Airpords', precio:	403681},
+    {Nombre: 'Google_pixel_8', precio: 509045},
+    {Nombre: 'MacBook_pro', precio:	640658},
+    {Nombre: 'Rasperry_Pi_5', precio:	360322},
+    {Nombre: 'Lenovo_Think_Pad', precio:	485753},
+    {Nombre: 'PlayStation_5', precio:	454103},
+    {ombre: 'DJI_Mavic_Dron', precio:	625316}
+    ];
+    
+    let impuesto = producto.map(producto => producto.precio * (0.15));
+    console.log(impuesto); 
+    let totalproducto = impuesto.reduce((total, valor) => total + valor, 0 )
+    console.log(totalproducto); 
+    
+    /*
+    //Ejercicio 2
+    //Filtrar estudiantes aprobados: Dada una lista de 20 estudiantes de la carrera
+    //de psicología, con sus notas (una sola, en un rango de 1 a 100), filtra aquellos
+    //que tengan una nota mayor a 60 utilizando filter()
+    
+    let estudiantes = [
+    {nombre: 'Laura Psicologia', nota: 72},
+    {nombre: 'Adriana Psicologia', nota: 42},
+    {nombre:'Fernanda Psicologia', nota: 12},
+    {nombre:'Luis Psicologia', nota:3},
+    {nombre:'Yorelis Psicologia', nota: 95},
+    {nombre:'Daniel Psicologia', nota: 44},
+    {nombre:'Felipe Psicologia', nota: 91},
+    {nombre:'Cristian Psicologia', nota: 62},
+    {nombre:'katherine Psicologia', nota: 96},
+    {nombre:'David Psicologia', nota:80},
+    {nombre:'Erick Psicologia', nota: 95},
+    {nombre:'Gineth Psicologia', nota: 28},
+    {nombre:'Sofia Psicologia', nota: 45},
+    {nombre:'Elkin Psicologia', nota: 96},
+    {nombre:'Heydi Psicologia', nota: 21},
+    {nombre:'Gunesh Psicologia', nota: 53},
+    {nombre:'Estevan Psicologia', nota: 3},
+    {nombre:'Milady Psicologia', nota: 19},
+    {nombre:'Sandra Psicologia', nota: 18},
+    {nombre:'Estafanny Psicologia', nota:	64}
+    ];
+    const notamayor = estudiantes.filter(estudiantes => estudiantes.nota >= 60);
+    console.log(notamayor);
+    
+    //Ejercicio 3 
+    let producto = [
+    {Producto: "Manzanas", precio: 38825},
+    {Producto: "Pan",	precio:	23711},
+    {Producto: "Leche", precio: 10353},
+    {Producto: "Arroz", precio: 24376},
+    {Producto: "Pasta", precio: 31524},
+    {Producto: "Pollo", precio: 35299},
+    {Producto: "Tomates", precio: 41222},
+    {Producto: "Yogur", precio: 31306},
+    {Producto: "Queso", precio: 35480},
+    {Producto: "Huevos", precio: 5369},
+    {Producto: "Zanahorias", precio: 29218},
+    {Producto: "Lentejas", precio: 43915},
+    {Producto: "Aguacates", precio: 38117},
+    {Producto: "Pescado", precio: 1898},
+    {Producto: "Cereal", precio: 39889},
+    {Producto: "Papas", precio: 9250},
+    {Producto: "Frutos secos", precio: 12674},
+    {Producto: "Aceite de oliva", precio: 40868},
+    {Producto: "Mantequilla",	precio:	23946},
+    {Producto: "Espinacas", precio: 34788}
+    ];
+    let totalproducto = producto.reduce((total, item) => total +
+    item.precio, 0);
+    console.log(totalproducto);
+    
+    //Ejercicio 4
+    //Verificar productos baratos: Verifica si hay algún producto cuyo precio sea
+    //menor a $50000 (cincuenta mil pesos colombianos) utilizando some().
+    let producto = [
+    {Producto: "Pescado", precio: 76000},
+    {Producto: "Cereal", precio: 53000},
+    {Producto: "Papas", precio: 9250},
+    {Producto: "Frutos secos", precio: 12674},
+    {Producto: "Aceite de oliva", precio: 40868},
+    ];
+    let productobajo = producto.some(producto => producto.precio < 50000);
+    console.log(productobajo);
+    
+    //Ejercicio 5
+    //Revisar si todos los estudiantes pasaron: En la lista de estudiantes, utiliza
+    //every() para verificar si todos aprobaron con más de 60 puntos.
+    let estudiantes = [
+    {nombre: 'Laura Psicologia', nota: 72},
+    {nombre: 'Adriana Psicologia', nota: 42},
+    {nombre:'Fernanda Psicologia', nota: 12},
+    {nombre:'Luis Psicologia', nota:3},
+    {nombre:'Yorelis Psicologia', nota: 95},
+    {nombre:'Daniel Psicologia', nota: 44},
+    {nombre:'Felipe Psicologia', nota: 91},
+    {nombre:'Cristian Psicologia', nota: 62},
+    ];
+    let estudiantesaprobados = estudiantes.every(estudiantes => estudiantes.nota > 60);
+    console.log(estudiantesaprobados);
+    
+    //Ejercicio 6
+    //Calcular el promedio de notas: Dada la lista de estudiantes, usa reduce()
+    //para calcular el promedio de sus notas.
+    let estudiantes = [ 
+    {nombre: 'Laura Psicologia', nota: 72},
+    {nombre: 'Adriana Psicologia', nota: 42},
+    {nombre:'Fernanda Psicologia', nota: 12},
+    {nombre:'Luis Psicologia', nota: 3},
+    {nombre:'Yorelis Psicologia', nota: 95},
+    {nombre:'Daniel Psicologia', nota: 44},
+    {nombre:'Felipe Psicologia', nota: 91},
+    {nombre:'Cristian Psicologia', nota: 62},
+    ];
+      
+    const suma = estudiantes.reduce((acumulador, estudiante) => acumulador + estudiante.nota, 0);
+    const promedio = suma / estudiantes.length;
+      
+    console.log(El promedio de notas es: ${promedio});
+    
+    //Ejercicio 7
+    //Verificar si algún producto tiene descuento: Modifica la lista de productos con
+    //precios originales y precios con descuento, y verifica si algún producto tiene
+    //descuento aplicando some().
+    let productos = [
+        { nombre: 'Producto', precioinicial: 100, precioDescuento: 80 },
+        { nombre: 'Producto', precioinicial: 200, precioDescuento: 200 },
+        { nombre: 'Producto', precioinicial: 150, precioDescuento: 120 },
+        { nombre: 'Producto', precioinicial: 50, precioDescuento: 50 },
+        { nombre: 'Producto', precioinicial: 300, precioDescuento: 250 }
+    ];
+    
+    const tieneDescuento = productos.some(producto => producto.precioinicial > producto.precioDescuento);
+    
+    if (tieneDescuento) {
+        console.log('Algunos productos tienen descuento.');
+    } else {
+        console.log('Ningún producto tiene descuento.');
+    }
+    
+    //Ejercicio 8
+    //Filtrar usuarios activos: Crea una lista de usuarios donde exista un campo de
+    //estado(activo, inactivo) y filtra dicha lista de usuarios para obtener solo aquellos
+    //que están activos.
+    const usuarios = [
+        { nombre: 'Milady', estado: 'activo' },
+        { nombre: 'Heydi', estado: 'inactivo' },
+        { nombre: 'Ginet', estado: 'activo' },
+        { nombre: 'Maria', estado: 'inactivo' },
+        { nombre: 'Yesid', estado: 'inactivo' }
+    ];
+    const usuariosActivos = usuarios.filter(usuario => usuario.estado === 'activo');
+    
+    console.log(usuariosActivos);
+    
+    //Ejercicio 9
+    //Transformar nombres en mayúsculas: Usa map() para transformar todos los
+    //nombres de una lista en mayúsculas.
+    // Lista de nombres
+    const nombres = ['Milady', 'Maria', 'Andres', 'Kathrine'];
+    const nombresMayusculas = nombres.map(nombre => nombre.toUpperCase());
+    console.log(nombresMayusculas);
+    
+    
+    //Ejercicio 10 
+    //Concatenar nombres de usuarios: Utiliza reduce() para concatenar todos los
+    //nombres de los usuarios en una cadena de texto.
+    const usuarios = [
+        { nombre: 'Milady' },
+        { nombre: 'María' },
+        { nombre: 'Andres' },
+        { nombre: 'Heydi' },
+        { nombre: 'Gineth' },
+        { nombre: 'Katherine' }
+    ];
+    const nombresConcatenados = usuarios.reduce((cadena, usuario) => cadena + usuario.nombre + ' ', '').trim();
+    
+    console.log(nombresConcatenados)
+    */
